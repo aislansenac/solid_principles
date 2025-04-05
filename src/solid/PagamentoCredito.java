@@ -1,6 +1,6 @@
 package solid;
 
-public class PagamentoCredito implements Pagamento{
+public class PagamentoCredito implements Pagamento, PagamentoCartao{
 
     @Override
     public void registraPagamento() {
