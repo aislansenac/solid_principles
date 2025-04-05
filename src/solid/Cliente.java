@@ -9,6 +9,16 @@ public class Cliente {
         
     }
     
+    public Cliente(String nome, String cpf, String endereco) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+    }
+    
+    public void exibeCliente() {
+        System.out.println("Cliente: " + nome + "(" + cpf + ") - " + endereco);
+    }
+    
     public boolean validaCpf() {
         return cpf.length() == 11;
     }
