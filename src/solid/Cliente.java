@@ -1,9 +1,9 @@
 package solid;
 
 public class Cliente {
-    private String nome;
-    private String cpf;
-    private String endereco;
+    protected String nome;
+    protected String cpf;
+    protected String endereco;
     
     public Cliente() {
         
