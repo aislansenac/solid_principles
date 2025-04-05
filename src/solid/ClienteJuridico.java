@@ -8,8 +8,10 @@ public class ClienteJuridico extends Cliente{
         
     }
     
-    public ClienteJuridico(String nome, String cpf, String endereco) {
-        super(nome, cpf, endereco);
+    public ClienteJuridico(String nome, String nomeFantasia, String cnpj, String endereco) {
+        super(nome, endereco);
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
     }
     
     public String getCnpj() {
@@ -30,12 +32,11 @@ public class ClienteJuridico extends Cliente{
     
     @Override
     public void exibeCliente() {
-        System.out.println("Cliente: " + nome + "(" + cnpj + ") - " + endereco);
+        System.out.println("EMPRESA: " + nomeFantasia + "\nCliente: " + nome +  "\nCNPJ: " + cnpj + "\nEndereco: " + endereco);
     }
     
     @Override
-    public boolean validaCpf() {
-        // Não valida CPF, pois é CNPJ
-        return false;
+    public boolean validaDocumento() {
+        return cnpj.length() == 14;
     }
 }

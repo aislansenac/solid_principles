@@ -1,41 +1,28 @@
 package solid;
 
-public class Cliente {
+public abstract class Cliente {
     protected String nome;
-    protected String cpf;
     protected String endereco;
     
     public Cliente() {
         
     }
     
-    public Cliente(String nome, String cpf, String endereco) {
+    public Cliente(String nome, String endereco) {
         this.nome = nome;
-        this.cpf = cpf;
         this.endereco = endereco;
     }
     
-    public void exibeCliente() {
-        System.out.println("Cliente: " + nome + "(" + cpf + ") - " + endereco);
-    }
+    public abstract boolean validaDocumento();
     
-    public boolean validaCpf() {
-        return cpf.length() == 11;
-    }
+    public abstract void exibeCliente();
+    
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getEndereco() {
